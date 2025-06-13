@@ -7,17 +7,28 @@ const ProductFilters: React.FC<{
   selectedCategory: string;
   onCategoryChange: (value: string) => void;
   categories: string[];
+  itemsPerPage: number;
+  onItemsPerPageChange: (value: string) => void;
 }> = ({
   searchTerm,
   onSearchChange,
   selectedCategory,
   onCategoryChange,
   categories,
+  itemsPerPage,
+  onItemsPerPageChange,
 }) => {
   const categoryOptions = categories.map((category) => ({
     value: category,
     label: category.charAt(0).toUpperCase() + category.slice(1),
   }));
+
+  const itemsPerPageOptions = [
+    { value: "5", label: "5" },
+    { value: "10", label: "10" },
+    { value: "15", label: "15" },
+    { value: "20", label: "20" },
+  ];
 
   return (
     <div className="flex flex-col sm:flex-row gap-4">
@@ -26,7 +37,7 @@ const ProductFilters: React.FC<{
         onChange={onSearchChange}
         placeholder="Search products..."
       />
-      <p>Search Term is: {searchTerm}</p>
+
       <SelectInput
         value={selectedCategory}
         onChange={onCategoryChange}
@@ -34,7 +45,16 @@ const ProductFilters: React.FC<{
         placeholder="All Categories"
         icon={Filter}
       />
-      Search Category is: {selectedCategory}
+
+      <div className="flex items-center gap-2">
+        <label className="text-sm text-gray-700 whitespace-nowrap">Show:</label>
+        <SelectInput
+          value={itemsPerPage.toString()}
+          onChange={onItemsPerPageChange}
+          options={itemsPerPageOptions}
+          className="w-20"
+        />
+      </div>
     </div>
   );
 };

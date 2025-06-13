@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Dashboard } from "./components/dashboard/Dashboard";
-import { Products } from "./components/products/Products";
+import Products from "./components/products/Products";
 import { Package, X } from "lucide-react";
 import Sidebar from "./components/Layout/Sidebar";
 import Header from "./components/Layout/Header";
