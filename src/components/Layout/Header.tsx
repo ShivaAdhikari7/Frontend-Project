@@ -13,7 +13,7 @@ const Header: React.FC<HeaderProps> = ({ activeTab, setSidebarOpen }) => {
         <div className="flex items-center space-x-4">
           <button
             onClick={() => setSidebarOpen(true)}
-            className="lg:hidden p-2 rounded-md text-gray-400 hover:text-gray-600 hover:bg-gray-100 transition-colors"
+            className=" lg:hidden p-2 rounded-md text-gray-400 hover:text-gray-600 hover:bg-gray-100 transition-colors cursor-pointer"
             aria-label="Open sidebar"
           >
             <Menu className="h-6 w-6" />

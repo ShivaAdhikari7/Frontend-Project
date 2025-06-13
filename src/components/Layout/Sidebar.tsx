@@ -7,6 +7,18 @@ interface MenuItem {
   label: string;
   icon: LucideIcon;
 }
+const menuItems: MenuItem[] = [
+  {
+    id: "dashboard",
+    label: "Dashboard",
+    icon: Home,
+  },
+  {
+    id: "products",
+    label: "Products",
+    icon: Package,
+  },
+];
 
 interface SidebarProps {
   activeTab: string;
@@ -19,19 +31,6 @@ const Sidebar: React.FC<SidebarProps> = ({
   setActiveTab,
   setSidebarOpen,
 }) => {
-  const menuItems: MenuItem[] = [
-    {
-      id: "dashboard",
-      label: "Dashboard",
-      icon: Home,
-    },
-    {
-      id: "products",
-      label: "Products",
-      icon: Package,
-    },
-  ];
-
   const handleItemClick = (itemId: string) => {
     setActiveTab(itemId);
     setSidebarOpen(false);
@@ -44,7 +43,7 @@ const Sidebar: React.FC<SidebarProps> = ({
           key={item.id}
           onClick={() => handleItemClick(item.id)}
           className={`
-            w-full flex items-center px-4 py-3 text-sm font-medium rounded-lg transition-colors
+            w-full flex items-center px-4 py-3 text-sm font-medium rounded-lg transition-colors cursor-pointer
             ${
               activeTab === item.id
                 ? "bg-blue-100 text-blue-600 shadow-sm"

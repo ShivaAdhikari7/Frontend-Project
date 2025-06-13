@@ -39,7 +39,7 @@ const App = () => {
           sidebarOpen ? "translate-x-0" : "-translate-x-full"
         }`}
       >
-        <div className="flex items-center justify-between h-16 px-6 border-b border-gray-200 flex-shrink-0">
+        <div className="flex items-center justify-between h-16 px-6 border-b border-gray-100 flex-shrink-0">
           <div className="flex items-center">
             <Package className="h-8 w-8 text-blue-600" />
             <span className="ml-2 text-xl font-semibold text-gray-900">
