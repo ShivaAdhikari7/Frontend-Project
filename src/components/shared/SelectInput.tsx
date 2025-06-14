@@ -22,7 +22,7 @@ const SelectInput: React.FC<{
     <select
       value={value}
       onChange={(e) => onChange(e.target.value)}
-      className={`block w-full pr-8 py-2 border border-gray-300 rounded-md leading-5 bg-white focus:outline-none focus:ring-1 focus:ring-blue-500 focus:border-blue-500 ${
+      className={`block w-full pr-7 py-2 border border-gray-300 rounded-md leading-5 bg-white focus:outline-none focus:ring-1 focus:ring-blue-500 focus:border-blue-500 ${
         Icon ? "pl-10" : "pl-3"
       }`}
     >
