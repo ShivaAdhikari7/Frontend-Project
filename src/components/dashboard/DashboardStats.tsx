@@ -3,7 +3,7 @@ import { Tag } from "lucide-react";
 import { DollarSign } from "lucide-react";
 import { Package } from "lucide-react";
 import { Star } from "lucide-react";
-import useApiData from "../../../hooks/useApiData";
+import useApiData from "../../hooks/useApiData";
 const DashboardStats: React.FC = () => {
   const { products, categories } = useApiData();
   const totalProducts = products.length;

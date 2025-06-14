@@ -19,12 +19,10 @@ export const fetchProductsAndCategories = createAsyncThunk(
     ]);
 
     if (!productsRes.ok) {
-      throw new Error(`Failed to fetch products: ${productsRes.statusText}`);
+      throw new Error("Failed to fetch products");
     }
     if (!categoriesRes.ok) {
-      throw new Error(
-        `Failed to fetch categories: ${categoriesRes.statusText}`
-      );
+      throw new Error("Failed to fetch categories");
     }
 
     const products = await productsRes.json();

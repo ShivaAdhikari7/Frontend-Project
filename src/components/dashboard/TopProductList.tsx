@@ -1,6 +1,6 @@
 import { Star } from "lucide-react";
 
-import useApiData from "../../../hooks/useApiData";
+import useApiData from "../../hooks/useApiData";
 
 const TopProductsList: React.FC = ({}) => {
   const { products } = useApiData();
