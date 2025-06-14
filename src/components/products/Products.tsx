@@ -8,7 +8,7 @@ import ProductTable from "./ProductTable";
 import Pagination from "./Pagination";
 import { Package } from "lucide-react";
 const Products = () => {
-  const { products, categories } = useApiData();
+  const { products, categories, loading } = useApiData();
 
   const {
     searchTerm,
@@ -45,14 +45,8 @@ const Products = () => {
     resetPage();
   };
 
-  if (products.length === 0) {
-    return (
-      <div className="flex items-center justify-center h-64">
-        <div className="text-center">
-          <Loading size="lg" />
-        </div>
-      </div>
-    );
+  if (loading) {
+    return <Loading />;
   }
 
   return (

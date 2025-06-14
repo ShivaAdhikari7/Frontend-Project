@@ -19,6 +19,7 @@ const useProductFilters = (products: Product[]) => {
   return {
     searchTerm,
     setSearchTerm,
+
     selectedCategory,
     setSelectedCategory,
     filteredProducts,
