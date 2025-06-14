@@ -75,7 +75,6 @@ const Pagination: React.FC<PaginationProps> = ({
 
         {/* Page Numbers */}
         <div className="flex items-center space-x-1">
-          {/* Show first page if not in visible range */}
           {pageNumbers[0] > 1 && (
             <>
               <button
