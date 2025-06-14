@@ -1,4 +1,4 @@
-import useApiData from "../../../hooks/useApiData";
+import useApiData from "../../hooks/useApiData";
 const getCategoryColor = (category: string): string => {
   const colors: Record<string, string> = {
     electronics: "bg-blue-500",
