@@ -1,54 +1,70 @@
-# React + TypeScript + Vite
+# OnlineStore
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern e-commerce web application built with React and TypeScript. Features product browsing, advanced search, filtering, and pagination for a seamless shopping experience.
 
-Currently, two official plugins are available:
+## Live Demo
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+https://vonlinestore.netlify.app/
 
-## Expanding the ESLint configuration
+## Tech Stack
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- React + TypeScript
+- Redux (state management)
+- Tailwind CSS (styling)
+- Lucide React (icons)
+- Vite (build tool)
+- Vitest + Jest (testing)
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+## Features
+
+- **Home Page**: Product insights and overview
+- **Products Page**: Complete product catalog with pagination
+- **Advanced Search**: Search products by name and description
+- **Category Filter**: Filter products by category
+- **Responsive Design**: Works on all devices
+- **Fast Performance**: Optimized with Vite
+- **Type Safety**: Full TypeScript integration
+- **Testing**: Comprehensive test coverage with Vitest
+
+## Installation
+
+1. Clone the project
+
+   ```bash
+   git clone https://github.com/ShivaAdhikari7/online--store.git
+   ```
+
+2. Install dependencies
+
+   ```bash
+   npm install
+   ```
+
+3. Run the project
+   ```bash
+   npm run dev
+   ```
+
+Visit [localhost:5174](http://localhost:5174) to view the app.
+
+## Docker Setup
+
+```bash
+docker build -t onlinestore .
+docker run -p 3000:3000 onlinestore
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## How to Use
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+1. **Home Page**: View product insights and featured items
+2. **Products Page**: Browse all products with pagination controls
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+## Scripts
+
+- `npm run dev` - Start development server
+- `npm run build` - Build for production (with TypeScript compilation)
+- `npm run test` - Run tests in watch mode
+
+---
+
+Built by [Shiva Adhikari](https://github.com/ShivaAdhikari7)
