@@ -22,7 +22,6 @@ const App = () => {
 
   return (
     <div className="flex min-h-screen bg-gray-50">
-      {/* Mobile overlay */}
       {sidebarOpen && (
         <div className="fixed inset-0 z-40 lg:hidden">
           <div
@@ -33,7 +32,6 @@ const App = () => {
         </div>
       )}
 
-      {/* Sidebar */}
       <div
         className={`fixed inset-y-0 left-0 z-50 w-64 bg-white shadow-lg transform transition-all duration-300 ease-in-out lg:relative lg:translate-x-0 flex flex-col ${
           sidebarOpen ? "translate-x-0" : "-translate-x-full"
@@ -64,7 +62,6 @@ const App = () => {
         </div>
       </div>
 
-      {/* Main content */}
       <div className="flex-1 flex flex-col min-w-0">
         <Header activeTab={activeTab} setSidebarOpen={setSidebarOpen} />
 
